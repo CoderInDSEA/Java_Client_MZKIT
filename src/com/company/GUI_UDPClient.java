@@ -19,8 +19,6 @@ public class GUI_UDPClient extends Frame implements ActionListener {
     // Constructor to setup GUI components and event handlers
     public GUI_UDPClient() {
         setLayout(new FlowLayout());
-        // "super" Frame, which is a Container, sets its layout to FlowLayout to arrange
-        // the components from left-to-right, and flow to next row from top-to-bottom.
 
         LabelGUI = new Label("Command Enter");  // construct the Label component
         add(LabelGUI);                    // "super" Frame container adds Label component
@@ -60,9 +58,6 @@ public class GUI_UDPClient extends Frame implements ActionListener {
             InetAddress IPAddress = InetAddress.getByName("localhost");
 
             Scanner input = new Scanner(System.in);
-            //String command ;
-            //System.out.println("Enter command : " );
-            //command = input.nextLine();
             byte[] sendingDataBuffer = new byte[command.length()];
             byte[] sendingBufferCommandInit = new byte[1024];
             sendingDataBuffer = command.getBytes();
